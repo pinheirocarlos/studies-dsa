@@ -1,7 +1,9 @@
+package arrays;
+
 import java.time.Duration;
 import java.time.Instant;
 
-public class TestandoArrays {
+public class InvertendoArrays {
     public static void main(String[] args) {
         //Arrays não são dinâmicos, portanto precisamos declarar a quantidade de itens durante inicialização
         //A vantagem do array é que são alocadas posições subsequentes na memória para cada item do array,

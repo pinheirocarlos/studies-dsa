@@ -54,6 +54,8 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
                 actual = null;
                 return;
             }
+            previousNode = actual;
+            actual = actual.getNextNode();
         }
 
     }
@@ -66,6 +68,17 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
             System.out.println(actualNode);
             actualNode = actualNode.getNextNode();
         }
+    }
+
+    public Node<T> findMiddle(){
+        Node<T> current = root;
+        Node<T> nextNode = root;
+
+        while (nextNode.getNextNode() != null && nextNode.getNextNode().getNextNode() != null){
+            current = current.getNextNode();
+            nextNode = nextNode.getNextNode().getNextNode();
+        }
+        return current;
     }
 
     @Override

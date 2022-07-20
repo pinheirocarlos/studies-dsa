@@ -10,5 +10,7 @@ public interface List<T> {
 
     int size();
 
+    void reverse();
+
 }
 

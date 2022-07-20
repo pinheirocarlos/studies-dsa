@@ -2,6 +2,20 @@ package linkedlists;
 
 public class LinkedList<T extends Comparable<T>> implements List<T> {
 
+
+    /*
+    * LinkedLists são estrutura dinâmica, que podem crescer organicamente.
+    * Possuem um armazenamento maior que o de arrays, por exemplo, por cada nó ter que armazenar uma referência
+    * para o próximo nó.
+    * Diferentemente de arrays, que são armazenados sequencialmente na memória, cada nó é armazenado em um local
+    * diferente na memória.
+    * O tempo de complexidade para armazenamento na primeira posição é O(1)
+    * Para buscar item arbitrário é O(N)
+    * Se for uma lista encadeada dupla (doubly linked list) o armazenamento em memória eh ainda maior
+    * pois além de guardar a referência para o próximo elemento, há também o armazenamento do item anterior
+    * Em linkedlist simples há a referência ao primeiro item (head), para lista dupla há para a cauda (tail)
+    * */
+
     private Node<T> root;
     private int numOfItems;
 
@@ -79,6 +93,22 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
             nextNode = nextNode.getNextNode().getNextNode();
         }
         return current;
+    }
+
+    @Override
+    public void reverse(){
+        Node<T> current = root;
+        Node<T> previous = null;
+        Node<T> next = null;
+
+        while(current.getNextNode()!=null){
+            next = current.getNextNode();
+            current.setNextNode(previous);
+            previous = current;
+            current = next;
+        }
+
+        this.root = previous;
     }
 
     @Override

@@ -9,8 +9,9 @@ public class App {
         names.insert("Zé");
         names.insert("Maria2");
 
-
-
-        System.out.println(names.findMiddle());
+        names.traverse();
+        names.reverse();
+        names.traverse();
+        System.out.println();
     }
 }

@@ -1,0 +1,8 @@
+Todos itens do array podem ser identificados através de um índice (index)
+A ideia é fazer a inserção e remoção de itens o mais rápido possível
+Cada item do array está posicionado lado a lado na memória ram
+Acessar os itens por índice é a vantagem principal do array
+Em Java/C/C++ os itens armazenados no array devem ser do mesmo tipo
+A busca de um elemento por índice é O(1)
+Array possui um tamanho fixo (em Java é feito um resize automaticamente)
+Inserir itens no array é O(1)
